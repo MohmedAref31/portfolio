@@ -1,0 +1,57 @@
+
+
+.icons .icon a{
+    width: 40px;
+    height: 40px;
+    
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.icons .icon a , .contact-btn{position: relative;}
+.icons .icon a::before , .contact-btn::before{
+            content: '';
+            width: 0;
+            height: 0;
+            background-color: red;
+            position: absolute;
+            background-color: var(--g-color);
+            inset: 0;
+            margin: auto;
+            transition:all .5s ;
+            
+            -webkit-transition:all .5s ;
+            -moz-transition:all .5s ;
+            -ms-transition:all .5s ;
+            -o-transition:all .5s ;
+            z-index: -1;
+}
+
+.icons .icon a:hover::before , .contact-btn:hover::before{
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+}
+.icons .icon a:hover::before{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+} 
+ .contact-btn:hover::before{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+
+
+
+.nav-item a:hover{
+    color: var(--m-color) !important;
+}
